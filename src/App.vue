@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloCompositionApi />
+    <HelloCompositionApiWatch />
   </div>
 </template>
 
 <script>
 import HelloCompositionApi from './components/HelloCompositionApi.vue'
+import HelloCompositionApiWatch from './components/HelloCompositionApiWatch.vue'
 
 export default {
   name: 'App',
   components: {
-      HelloCompositionApi
+      HelloCompositionApi,
+      HelloCompositionApiWatch,
   }
 }
 </script>
