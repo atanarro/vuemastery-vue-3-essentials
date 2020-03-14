@@ -1,19 +1,13 @@
 <script>
-    import { ref, computed } from "@vue/composition-api";
-    export default {
-        setup(props, context) {
-            console.log(props, context);
-            const capacity = ref(3);
-            const attending = ref(['a person', 'another person', 'a third one']);
-            function increaseCapacity() {
-                capacity.value++;
-            }
-            const spacesLeft = computed(() => {
-                return capacity.value - attending.value.length;
-            });
-            return { capacity, increaseCapacity, attending, spacesLeft };
-        }
-    };
+import useEventSpace from "../use/event-space";
+import useMapping from "../use/mapping";
+
+export default {
+    setup(props, context) {
+        console.log(props, context);
+        return { ...useEventSpace(), ...useMapping };
+    }
+};
 </script>
 
 <template>
